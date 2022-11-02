@@ -9,5 +9,8 @@ npx hardhat help
 npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
-npx hardhat run scripts/deploy.js --network goerli
+env $(cat .env) npx hardhat run scripts/deploy.js --network goerli
+env $(cat .env) npx hardhat run scripts/upgrade.js --network goerli
+
+env $(cat .env) npx hardhat verify --network goerli <contract_address>
 ```
