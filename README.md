@@ -6,7 +6,7 @@ Try running some of the following tasks:
 
 ```shell
 npx hardhat help
-npx hardhat test
+env $(cat .env) npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
 env $(cat .env) npx hardhat run scripts/deploy.js --network goerli
